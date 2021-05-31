@@ -1,3 +1,5 @@
+alert("Make sure you don't have an adblocker enabled");
+
 //calculate functions
 let calculateBtn = document.querySelector('#calculate');
 calculateBtn.addEventListener('click', () => {
