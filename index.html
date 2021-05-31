@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,6 +26,7 @@
     }
   </style>
 </head>
+
 <body>
   <fieldset>
     <legend>Error Calculator</legend>
@@ -42,31 +44,27 @@
   </fieldset>
 
   <section id="error-btns">
-    <button>Console Log Demo</button>
-    <button>Console Error Demo</button>
-    <button>Console Dir</button>
-    <button>Console dirxml</button>
-    <button>Console Group Start</button>
-    <button>Console Group End</button>
-    <button>Console Table</button>
-    <button>Start Timer</button>
-    <button>End Timer</button>
-    <button>Console Trace</button>
-    <button>Trigger a Global Error</button>
+    <button id='log'>Console Log Demo</button>
+    <button id='err'>Console Error Demo</button>
+    <button id='dir'>Console Dir</button>
+    <button id='dirxml'>Console dirxml</button>
+    <button id='start'>Console Group Start</button>
+    <button id='end'>Console Group End</button>
+    <button id='table'>Console Table</button>
+    <button id='timer'>Start Timer</button>
+    <button id='timeoff'>End Timer</button>
+    <button id='trace'>Console Trace</button>
+    <button id='global'>Trigger a Global Error</button>
   </section>
 
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
-    let calculateBtn = document.querySelector('#calculate');
-    calculateBtn.addEventListener('click', () => {
-      let output = document.querySelector('output');
-      let firstNum = document.querySelector('#first-num').value;
-      let secondNum = document.querySelector('#second-num').value;
-      let operator = document.querySelector('#operator').value;
-      output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
+    window.TrackJS && TrackJS.install({
+      token: "7b3710e06ba84c4d9a7e82df009bf210"
+      // for more configuration options, see https://docs.trackjs.com
     });
-
-    let errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
-    // TODO - Make buttons functional
   </script>
+  <script type='text/javascript' src="script.js"></script>
 </body>
+
 </html>
